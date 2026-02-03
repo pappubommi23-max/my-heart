@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #ffe6f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Calendar */
+#calendar h1 {
+  font-size: 60px;
+  color: #ff4081;
+  animation: zoom 1s infinite;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Card */
+#card {
+  background:#F88FFA;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff4081;
+  margin-left: -150px;
+  color: white;
+  font-family: cursive;
+  
+}
+
+#no {
+  background: #ccc;
+  position: absolute;
+  font-family: cursive;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+.yes-screen {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(#ff9a9e, #fad0c4);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.yes-screen img {
+  width: 318px;
+  margin-top: 20px;
+}
+
+.heart {
+  position: fixed;        /* IMPORTANT */
+  bottom: -20px;
+  z-index: 9999;          /* background mela varanum */
+  pointer-events: none;   /* buttons disturb aaga koodadhu */
+  animation: floatUp 4s linear forwards;
+}
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
